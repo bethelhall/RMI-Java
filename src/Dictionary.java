@@ -1,11 +1,11 @@
 
 
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
+import org.json.simple.parser.JSONParser;
+
 import java.io.*;
 import java.util.*;
-
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class Dictionary {
 
@@ -42,7 +42,7 @@ public class Dictionary {
         }
     }
 
-    public synchronized void updateJSONFile(String json) {
+    public void updateJSONFile(String json) {
         try {
             RandomAccessFile file = new RandomAccessFile(this.filePath, "rw");
 
@@ -73,7 +73,7 @@ public class Dictionary {
     }
 
     // write JSON file from JSONObject
-    public synchronized void writeJSONFile(JSONObject jsonObject) {
+    public void writeJSONFile(JSONObject jsonObject) {
         try {
             FileWriter file = new FileWriter(this.filePath);
             file.write(jsonObject.toJSONString());

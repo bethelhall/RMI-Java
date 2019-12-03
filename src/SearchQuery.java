@@ -40,7 +40,6 @@ public class SearchQuery extends UnicastRemoteObject implements ServerInterface 
         }
     }
 
-
     @Override
     public void search(Message msg) throws Exception {
         List<String> def;

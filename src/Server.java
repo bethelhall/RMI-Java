@@ -27,7 +27,7 @@ public class Server {
             // Binds the remote object by the name
             // geeksforgeeks
             Naming.rebind("rmi://localhost:1900"+
-                    "/geeksforgeeks",searchObj);
+                    "/rmidictionary",searchObj);
         }
         catch(Exception ae)
         {
